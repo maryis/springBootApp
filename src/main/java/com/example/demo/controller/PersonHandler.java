@@ -70,6 +70,7 @@ public class PersonHandler {
         }
         else  //diff ways
 //            return ResponseEntity.notFound().build();
+//         new ResponseEntity<>("Oracle Problem", HttpStatus.SERVICE_UNAVAILABLE)
             return ResponseEntity.status(400).body("no Data to delete");
 
     }

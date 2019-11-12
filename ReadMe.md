@@ -9,3 +9,5 @@ Data: CrudRepository : gives repo which by default has CRUD operations
 
 notice: oracle-driver dependencies do not exist on mvn-repo or spring-initializr 
 and we should add them separately
+
+- I added a global exception handler using @ControllerAdvice 

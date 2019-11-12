@@ -8,9 +8,11 @@ import java.util.List;
 
 @RepositoryRestResource(path = "vehicle") //to use this, we need spring-data-rest dependency!!!!!
 //it gives us list, (get,create,update,delete) by id  (a rest standard interface)
-// all available methods: http://localhost:8081/profile/vehicle/
+//for example : http://localhost:8081/vehicle/, http://localhost:8081/vehicle/2, http://localhost:8081/vehicle/+body+post
+// all available methods: http://localhost:8081/vehicle/
+
 public interface CarService extends PagingAndSortingRepository<Car, Integer> {
-    //Pageable secondPageWithFiveElements = PageRequest.of(1, 5); pagenumber and limit(no of records in page)
+    //Pageable secondPageWithFiveElements = PageRequest.of(1, 5); page-number and limit(no of records in page)
 //Pageable firstPageWithTwoElements = PageRequest.of(0, 2);
 //    By having it extend PagingAndSortingRepository, we get findAll(Pageable pageable) and findAll(Sort sort) methods for paging and sorting.
 //    Page<Product> allProductsSortedByName = productRepository.findAll(Sort.by("name"));
